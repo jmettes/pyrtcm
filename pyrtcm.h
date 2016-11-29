@@ -1,0 +1,1 @@
+extern void load_data(char *buf, int len, rtcm_t *rtcm);
