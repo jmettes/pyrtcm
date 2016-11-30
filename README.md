@@ -1,10 +1,11 @@
 # pyrtcm
 
-Python wrappers for a subset (RTCM only) of [RTKLIB](https://github.com/tomojitakasu/RTKLIB) C library.
+Python wrappers (using swig) for a subset (RTCM only) of [RTKLIB](https://github.com/tomojitakasu/RTKLIB) C library.
 
 ## Installation:
 
 ```bash
+sudo yum install swig
 make all
 ```
 
@@ -12,7 +13,7 @@ make all
 
 ```python
 >>> import pyrtcm
->>> rtcm = rtklib.rtcm_t()
+>>> rtcm = pyrtcm.rtcm_t()
 >>> pyrtcm.init_rtcm(rtcm)
 1
 >>> data = open('1004_msg.bin', 'rb').read()
